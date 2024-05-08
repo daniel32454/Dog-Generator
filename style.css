@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Style Script";
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: font-size 0.3s ease;
+}
+
+h1:hover {
+    font-size: 60px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Initially fully opaque */
+    animation: fadeOut 4s ease-in-out forwards; /* Animation to fade out the overlay */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none; /* Hide the overlay after fading out */
+    }
+}
+
+#overlay-content {
+    text-align: center;
+    color: white;
+}
+
+#overlay-content h2 {
+    font-size: 24px;
+    font-family: "Arial";
+    font-weight: 100;
+}
